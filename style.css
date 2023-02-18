@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
 }
-
+a {
+    text-decoration: none;
+}
 body {
     font-family: "Montserrat", sans-serif;
 }
@@ -55,41 +57,50 @@ body {
     color: #FFFFFF;
 }
 
-.game-box {
-    display: flex;
+.games {
+    
     gap: 32px;
     padding-top: 128px;
     padding-bottom: 128px;
     background: #000915;
 }
 
-.product {
+.games__list {
+    display: flex;
+    gap: 32px
+    
+}
+.games__item {
     width: 379px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    color: #FFFFFF;
-    position: relative;
-    transition: all 0.3s;
-    border-radius: 16px;
-    
 }
-.product:hover {
-    transform: scale(1.05);
-    
-}
-
-.product__text {
+.game__box {
+    width: 379px;
+    height: 200px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
     line-height: 32px;
     display: flex;
-    align-items: center;
-    position: absolute;
-    bottom: 32px;
-    left: 32px;
+    align-items: flex-end;
     color: #FFFFFF;
+    padding-bottom: 32px;
+    padding-left: 32px;
+    box-sizing: border-box;
+}
+.game__box--1 {
+    background-image: url(./img/Rectangle\ 6.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.game__box--2 {
+    background-size: cover;
+    background-image: url(./img/Rectangle\ 7.svg)
+
+}
+.game__box--3 {
+    background-size: cover;
+    background-image: url(./img/Rectangle\ 8.svg)
+    
 }
