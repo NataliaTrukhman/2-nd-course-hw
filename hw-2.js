@@ -23,3 +23,7 @@ alert (division);
 let degree = 2;
 let result = degree ** 5;
 alert (result);
+//6
+let h = 9;
+let d = 2;
+alert (9 % 2);
