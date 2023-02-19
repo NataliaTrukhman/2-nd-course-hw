@@ -49,3 +49,7 @@ user [age] = "hobby";
 delete ['city of residence'];
 let info = prompt ('Какую информацию хотите узнать о пользователе?')
 alert (user[info]);
+//10
+let yourName = prompt('Ваше имя?')
+alert(`Привет,`+ yourName`!`)
+
