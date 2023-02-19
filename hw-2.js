@@ -19,3 +19,7 @@ let multipl = x * y;
 alert (multipl);
 let division = x/y;
 alert (division);
+//5
+let degree = 2;
+let result = degree ** 5;
+alert (result);
