@@ -35,3 +35,6 @@ num *= 7;
 num /= 3;
 num ++ ;
 num -- ;
+//8
+let age = prompt ('Сколько вам лет?');
+alert (age);
