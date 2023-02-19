@@ -1,5 +1,5 @@
+let a = 10;
+a = 20 ;
+alert(a);
 
 
-let productPrice = prompt('Цена товара');
-
-alert(productPrice);
