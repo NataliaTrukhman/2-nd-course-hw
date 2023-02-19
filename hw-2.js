@@ -38,3 +38,14 @@ num -- ;
 //8
 let age = prompt ('Сколько вам лет?');
 alert (age);
+//9
+let user = {
+    name: "Bob",
+    age: 15,
+    isAdmin: true
+}
+user ['city of residence'];
+user [age] = "hobby";
+delete ['city of residence'];
+let info = prompt ('Какую информацию хотите узнать о пользователе?')
+alert (user[info]);
