@@ -78,7 +78,6 @@ body {
     line-height: 32px;
     align-items: flex-end;
     color: #FFFFFF;
-    border-radius: 16px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -93,8 +92,18 @@ body {
 .games__item:nth-child(3) .games__link {
     background-image: url(img/Rectangle\ 8.png);
 }
+.games__item {
+    transition: all 0.3s;
+    border-radius: 12px;
+}
+
+.games__item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 5px #c4c4c4;
+}
 .game__box {
     padding-bottom: 32px;
     padding-left: 32px;
+    box-sizing: border-box;
 
 }
