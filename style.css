@@ -65,6 +65,7 @@ body {
 .games__list{
     display: flex;
     gap: 32px;
+    list-style-type: none
 }
 .games__link {
     display: flex;
@@ -91,4 +92,9 @@ body {
 }
 .games__item:nth-child(3) .games__link {
     background-image: url(img/Rectangle\ 8.png);
+}
+.game__box {
+    padding-bottom: 32px;
+    padding-left: 32px;
+
 }
