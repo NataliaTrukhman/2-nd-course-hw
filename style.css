@@ -56,6 +56,9 @@ body {
     font-size: 18px;
     color: #FFFFFF;
 }
+.button:hover {
+   background: #EB443F
+}
 
 .games {
     padding-top: 128px;
@@ -93,13 +96,13 @@ body {
     background-image: url(img/Rectangle\ 8.png);
 }
 .games__item {
-    transition: all 0.3s;
+    transition: all 0.5s;
     border-radius: 12px;
 }
 
 .games__item:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 5px #c4c4c4;
+    border: 3px solid #44D2FF;
 }
 .game__box {
     padding-bottom: 32px;
