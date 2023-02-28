@@ -21,3 +21,7 @@ if (d > 100 || e > 100) {
 } else {
     console.log ('Неверно');
 }
+//4
+let a = Number ('2');
+let b = Number ('3');
+alert(a + b)
