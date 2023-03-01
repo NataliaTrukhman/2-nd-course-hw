@@ -117,7 +117,6 @@ body {
   background-image: url(img/Rectangle\ 8.png);
 }
 
-/* mobile */
 @media (max-width: 767px) {
   .center {
     padding-left: 16px;

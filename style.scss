@@ -124,45 +124,6 @@ body {
     background-image: url(img/Rectangle\ 8.png);
 }
 
-/* mobile */
 
-@media (max-width: 767px) {
-    .center {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-    .top {
-        height: 735px;
-    }
 
-    .title {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 39px;
-        display: flex;
-        align-items: center;
-        text-align: center
-    }
-    .header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        &__text {
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: 300;
-            font-size: 14px;
-            line-height: 22px;
-            text-align: center;
-            }
-    }
-    .games__list {
-       
-        flex-wrap: wrap;
-    }
-    
-}
-
+@import 'mob'
