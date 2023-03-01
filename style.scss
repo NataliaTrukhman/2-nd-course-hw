@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+.top {
+    height: 1024px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) -7.35%, #000915 100%), url(img/0001.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 78px;
+    padding-top: 217px;
+    padding-bottom: 32px;
+    color: #FFFFFF;
+    max-width: 788.78px;
+}
+
+.header__text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+    color: #FFFFFF;
+    max-width: 481px;
+    margin-bottom: 44px;
+}
+
+.button {
+    width: 234.06px;
+    height: 48.6px;
+    background: #9C0332;
+    border-radius: 30px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+    &:hover {
+        background: #EB443F
+     }
+}
+.button:hover {
+   background: #EB443F
+}
+
+.games {
+    padding-top: 128px;
+    padding-bottom: 128px;
+    background: #000915;
+    &__list{
+        display: flex;
+        gap: 32px;
+        list-style-type: none
+    }
+    &__item {
+        transition: all 0.5s;
+        border-radius: 12px;
+        &:hover {
+            transform: scale(1.05);
+            border: 3px solid #44D2FF;
+        }
+    }
+    &__link {
+        display: flex;
+        width: 379px;
+        min-height: 300px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        align-items: flex-end;
+        color: #FFFFFF;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &__box {
+        padding-bottom: 32px;
+        padding-left: 32px;
+        box-sizing: border-box;
+    
+    }
+}
+
+.games__item:nth-child(1) .games__link {
+    background-image: url(img/Rectangle\ 6.png);
+}
+.games__item:nth-child(2) .games__link {
+    background-image: url(img/Rectangle\ 7.png);
+}
+.games__item:nth-child(3) .games__link {
+    background-image: url(img/Rectangle\ 8.png);
+}
+
+
