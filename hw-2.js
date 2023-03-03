@@ -53,3 +53,22 @@ alert (user[info]);
 let yourName = prompt('Ваше имя?')
 alert(`Привет,`+ yourName`!`)
 
+
+
+let n = 1000; 
+let num = 0; 
+while (n >= 50) { 
+    num++; 
+    n /= 2; 
+}; 
+alert(n) 
+alert(num)
+
+
+//5
+
+let numFriday = 3;
+for (; numFriday <= 31; numFriday += 7) {
+    console.log(`Сегодня пятница, ${numFriday} число `);
+}
+
