@@ -15,8 +15,18 @@ i++;
 }
 
 //3
+let y =7;
 
+while(y<=22) {
+console.log(y);
+y++;
+}
+// или 
 
+for (let v =7; v<=22; v++) {
+    console.log(v);
+
+}
 //4
 
 
