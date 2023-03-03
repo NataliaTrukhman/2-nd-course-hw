@@ -39,11 +39,24 @@ const salary = {
     console.log (`${name} - зарплата ${salary [name]} долларов`)
    }
 
+//5
+
+
+let n = 1000; 
+let num = 0; 
+while (n > 50) { 
+    num++; 
+    n /= 2; 
+    }
+console.log(n) ;
+console.log(num);
 
 
 
 
-   
+
+    
+
 //6
 let numFriday = 3;
 for (; numFriday <= 31; numFriday += 7) {
@@ -51,4 +64,12 @@ for (; numFriday <= 31; numFriday += 7) {
 }
 
 
+//
+let num=0
 
+for(let n=1000 ; n>50 ; n/=2){
+
+num++;
+console.log(n);
+}
+console.log(num);
