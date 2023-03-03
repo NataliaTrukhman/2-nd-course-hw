@@ -29,8 +29,22 @@ for (let v =7; v<=22; v++) {
 }
 //4
 
+const salary = {
+    'Коля': 200,
+    'Вася' : 300,
+    "Петя" : 400
+   }
 
-//5
+   for (let name in salary) {
+    console.log (`${name} - зарплата ${salary [name]} долларов`)
+   }
+
+
+
+
+
+   
+//6
 let numFriday = 3;
 for (; numFriday <= 31; numFriday += 7) {
     console.log(`Сегодня пятница, ${numFriday} число `);
