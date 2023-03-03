@@ -51,8 +51,15 @@ while (n > 50) {
 console.log(n) ;
 console.log(num);
 
+//
+let num=0
 
+for(let n=1000 ; n>50 ; n/=2){
 
+num++;
+console.log(n);
+}
+console.log(num);
 
 
     
@@ -64,12 +71,4 @@ for (; numFriday <= 31; numFriday += 7) {
 }
 
 
-//
-let num=0
 
-for(let n=1000 ; n>50 ; n/=2){
-
-num++;
-console.log(n);
-}
-console.log(num);
