@@ -1,5 +1,10 @@
+//1
+let z =0;
 
-
+while(z<2) {
+console.log('Привет');
+z++;
+}
 
 //2
 let i =1;
