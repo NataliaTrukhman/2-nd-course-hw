@@ -127,5 +127,49 @@ body {
 }
 
 
+.gameseason-box {
+    height: 800px;
+    background: #000915;
+    display: flex;
+    gap: 135px;
+    padding-top: 282px;
+    padding-bottom: 282px;
+}
+
+    .gameseason {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        &__heading {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 59px;
+            color: #FFFFFF;
+        }
+        &__text {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 32px;
+            color: #FFFFFF;
+
+            max-width: 584px;;
+        }
+    
+    
+    }
+    
+
+
+    
+
+
+
+
+
+
 
 @import 'mob'
