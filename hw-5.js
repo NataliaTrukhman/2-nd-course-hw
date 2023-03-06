@@ -22,3 +22,17 @@ function EvenOdd(n) {
 EvenOdd(1)
 
 //3
+let z = Number(prompt('Введите число'));
+function degree(z) {
+   return z ** 2 ;
+}
+console.log(degree(z));
+//
+
+let x = Number(prompt('Введите число'));
+function degree(x) {
+   return x ** 2 ;
+}
+alert(degree(x));
+
+
