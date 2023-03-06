@@ -98,6 +98,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  padding: 30px 14px;
+  box-sizing: border-box;
 }
 .games__box {
   padding-bottom: 32px;
@@ -151,5 +153,6 @@ body {
   }
   .games__list {
     flex-wrap: wrap;
+    justify-content: center;
   }
 }/*# sourceMappingURL=style.css.map */
