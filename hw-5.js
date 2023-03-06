@@ -67,3 +67,12 @@ if (isNaN(m) || isNaN(n)) {
  examination(m, n);
 
 //6
+let num = prompt('Введите первое число');
+function ask(num) {
+    if (isNaN(num)) {
+      console.log ('Переданный параметр не является числом');
+    } else {
+        console.log(`${num} в кубе равняется ${num **3}`);
+    }
+}
+ask(num)
