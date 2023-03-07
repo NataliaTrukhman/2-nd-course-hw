@@ -147,6 +147,7 @@ body {
             font-size: 48px;
             line-height: 59px;
             color: #FFFFFF;
+            max-width: 377px;
         }
         &__text {
             font-family: 'Montserrat';
@@ -155,21 +156,8 @@ body {
             font-size: 18px;
             line-height: 32px;
             color: #FFFFFF;
-
             max-width: 584px;;
         }
-    
-    
     }
     
-
-
-    
-
-
-
-
-
-
-
 @import 'mob'
