@@ -40,5 +40,39 @@
         flex-wrap: wrap;
         justify-content: center;
     }
-
+    .game__link {
+    width: 343px;
 }
+
+.gameseason-box {
+    height: 653.61px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 51px;
+    padding-bottom: 85px;
+    gap: 64px;
+}
+
+
+.gameseason {
+    align-items: center;
+    text-align: center;
+
+    &__heading {
+        font-size: 32px;
+        line-height: 39px;
+    }
+
+    &__heading {
+        font-size: 32px;
+        line-height: 39px;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 22px;
+        width: 343px;
+    }
+}
+}
+

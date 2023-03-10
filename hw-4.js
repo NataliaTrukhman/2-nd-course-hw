@@ -58,10 +58,19 @@ for(let n=1000 ; n>50 ; n/=2){
 
 num++;
 console.log(n);
+
 }
+
 console.log(num);
 
+//
 
+let n = 1000
+for( ; n>50 ; n/=2){
+num++;
+}
+console.log(n);
+console.log(num);
     
 
 //6
