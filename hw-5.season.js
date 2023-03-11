@@ -18,4 +18,4 @@ if (monthNumber >= 1 && monthNumber <=2 || monthNumber === 12) { //почему 
 }
 }
 
-playseason();
+// playseason();
