@@ -50,4 +50,8 @@
 // console.log(search);
 
 
-//7
+//8
+let text = 'abcdef';
+const arr = text.split ('');
+arr.reverse(); // почему если  arr.join(''); и потом console.log(arr) не выводит строку, а только через console.log(arr.join(''));
+console.log(arr.join(''));
