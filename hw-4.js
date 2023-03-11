@@ -77,7 +77,7 @@ console.log(num);
 let numFriday = 3;
 for (; numFriday <= 31; numFriday += 7) {
     console.log(`Сегодня пятница, ${numFriday} число `);
-}
+};
 
 
 
