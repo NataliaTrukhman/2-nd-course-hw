@@ -17,7 +17,7 @@
 
 //4
 
-///????????
+
 // const arr = [];
 // for (let i = 0; i < 3; i++) {
 //     arr.push([]);
@@ -74,4 +74,8 @@
 
 
 //10
-const arr = [2, 3, 6, 7, 9];
+// const arr = [2, 3, 6, 7, 9];
+// for (let i = 0; i < arr.length; i++) {
+// 	result = arr[i] + arr[i + 1]
+//     console.log(result);      // не понимаю почему последнее значение NAN
+// }
