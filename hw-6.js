@@ -36,8 +36,18 @@
 // console.log(arr.concat([2, 2, 2]));  
 
 //6
-const arr = [9, 8, 7, 'a', 6, 5];
-arr.sort();
-arr.pop();
-arr.reverse();
-console.log(arr);  // неверный скорее всего способ
+// const arr = [9, 8, 7, 'a', 6, 5];
+// arr.sort();
+// arr.pop();
+// arr.reverse(); // если нужно вернуть начальный порядок цифр
+// console.log(arr);  // неверный скорее всего способ
+
+
+//7
+// const arr = [9, 8, 7, 6, 5];
+// let ask = Number(prompt('Введите число от 0 до 10'));
+// let search = arr.includes(ask);
+// console.log(search);
+
+
+//7
