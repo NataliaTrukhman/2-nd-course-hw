@@ -3,27 +3,27 @@
 // for (let i = 0; i < numbers.length; i++ ) {
 //     console.log(numbers[i]);
 //     if(numbers[i] == 10) break;
-    
+
 // };
- 
+
 //2
 // const numb = [1, 5, 4, 10, 0, 3];
 // console.log(numb.indexOf(4));
 
 
- //3
+//3
 //  const numbs = [1, 3, 5, 10, 20];
 //  console.log(numbs.join(' '));
 
 //4
 
-
+///????????
 // const arr = [];
-// for (const arrIn = 0; arrIn < 3; arrIn++) {
-// arr [arrIn] = [];
-// for (const item = 0; item < 3; item++) {
-// arrIn = [item];
-//  }
+// for (let i = 0; i < 3; i++) {
+//     arr.push([]);
+//     for (let k = 1; k <= 3; k++) {
+//         arr[i].push('1');
+//     }
 // }
 // console.log(arr);
 
@@ -51,7 +51,27 @@
 
 
 //8
-let text = 'abcdef';
-const arr = text.split ('');
-arr.reverse(); // почему если  arr.join(''); и потом console.log(arr) не выводит строку, а только через console.log(arr.join(''));
-console.log(arr.join(''));
+// let text = 'abcdef';
+// const arr = text.split ('');
+// arr.reverse(); // почему если  arr.join(''); и потом console.log(arr) не выводит строку, а только через console.log(arr.join(''));
+// console.log(arr.join(''));
+
+
+//9
+
+
+// const arr = [[1, 2, 3,],[4, 5, 6]];
+// function together(arr) {
+//     let result = [];
+//     for (let a = 0; a < arr.length; a++) {
+//     for (let b = 0; b < arr[a].length; b++) {
+//         result.push(arr[a][b]);   
+//      }
+//     }
+//   return result;
+// }
+// console.log(together(arr));
+
+
+//10
+const arr = [2, 3, 6, 7, 9];
