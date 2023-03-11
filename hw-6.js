@@ -16,19 +16,9 @@
 //  console.log(numbs.join(' '));
 
 //4
-// let arr = [];
-// for (let i = 0; i < 4; i++)
-// {
-//     arr[i] = [];
-//     for (let j = 0; j <= i; j++)
-//     {
-//         arr[i][j] = j + 1;
-//     }
-// }
-// console.log(arr);
+
 
 // const arr = [];
-
 // for (const arrIn = 0; arrIn < 3; arrIn++) {
 // arr [arrIn] = [];
 // for (const item = 0; item < 3; item++) {
@@ -45,3 +35,9 @@
 // const arr = [1, 1, 1]; // методом contact 
 // console.log(arr.concat([2, 2, 2]));  
 
+//6
+const arr = [9, 8, 7, 'a', 6, 5];
+arr.sort();
+arr.pop();
+arr.reverse();
+console.log(arr);  // неверный скорее всего способ
