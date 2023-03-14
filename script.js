@@ -60,12 +60,16 @@
 
 
 
- let arrSum = [3, 4, 5, 6];
+//  let arrSum = [3, 4, 5, 6];
 
 
-const sum = (a, b, ...rest) => {
-  let result = a + b;
-  return result;
-};
+// const sum = (a, b, ...rest) => {
+//   let result = a + b;
+//   return result;
+// };
 
-console.log(sum(1, 4, ...arrSum));
+// console.log(sum(1, 4, ...arrSum));
+
+
+// let currentDate = new Date();
+// console.log(currentDate);
