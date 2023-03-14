@@ -37,10 +37,19 @@
 
 //5
 
-function randomNumber (min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min +1 )) + min;
-}
- console.log(randomNumber (1,10)); //так было написано в интернете, если честно не понимаю принцип
+// function randomNumber (min, max) {
+//     min = Math.ceil(min);
+//     max = Math.floor(max);
+//     return Math.floor(Math.random() * (max - min +1 )) + min;
+// }
+//  console.log(randomNumber (1,10)); //так было написано в интернете, если честно не понимаю принцип
 
+//8
+// let myDate = new Date();
+// console.log(myDate);
+
+
+//9
+let currentDate = new Date();
+currentDate.setDate(73);
+console.log(currentDate); // не поняла про подсказку и getDate(), так вроде тоже вышло....?
