@@ -24,15 +24,24 @@
 //3
 
 // let numb = 32.58884;
-// //console.log(Math.floor(numb));
-// //console.log(Math.ceil(numb));
-// //console.log(Math.round(numb));
+// //console.log(Math.floor(numb)); //До меньшего целого
+// //console.log(Math.ceil(numb));  //До большего целого
+// //console.log(Math.round(numb)); // До ближайшего целого
 
 
 //4
 
-const arrNumber = [52, 53, 49, 77, 21, 32];
-console.log(Math.max(...arrNumber));
-console.log(Math.min(...arrNumber));   //можно ли еще каким-нибудь вариантом записать и найти значения ????
+// const arrNumber = [52, 53, 49, 77, 21, 32];
+// console.log(Math.max(...arrNumber));
+// console.log(Math.min(...arrNumber));   //можно ли еще каким-нибудь вариантом записать и найти значения ????
 
-//
+//5
+
+function randomNumber (min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.random() * (max - min +1 ) + min;
+}
+ 
+console.log(randomNumber (1,10)); //так было написано в интернете, но целое число не выхолит, если честно не понимаю принцип
+
