@@ -50,6 +50,6 @@
 
 
 //9
-let currentDate = new Date();
-currentDate.setDate(73);
-console.log(currentDate); // не поняла про подсказку и getDate(), так вроде тоже вышло....?
+// let currentDate = new Date();
+// currentDate.setDate(73);
+// console.log(currentDate); // не поняла про подсказку и getDate(), так вроде тоже вышло....?
