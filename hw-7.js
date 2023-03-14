@@ -40,8 +40,7 @@
 function randomNumber (min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.random() * (max - min +1 ) + min;
+    return Math.floor(Math.random() * (max - min +1 )) + min;
 }
- 
-console.log(randomNumber (1,10)); //так было написано в интернете, но целое число не выхолит, если честно не понимаю принцип
+ console.log(randomNumber (1,10)); //так было написано в интернете, если честно не понимаю принцип
 
