@@ -4,7 +4,7 @@ function playseason() {
     
     let monthNumber =  Number(prompt('Введите номер месяца'));
 
-if (monthNumber >= 1 && monthNumber <=2 || monthNumber === 12) { //почему то 12 не проходит проверку
+if (monthNumber >= 1 && monthNumber <=2 || monthNumber === 12) { 
     console.log('Зима');
 } else if (monthNumber >= 3 && monthNumber <= 5) {
     console.log('Весна');
