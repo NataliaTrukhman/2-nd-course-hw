@@ -79,3 +79,13 @@
 // 	result = arr[i] + arr[i + 1]
 //     console.log(result);      // не понимаю почему последнее значение NAN
 // }
+
+
+
+
+//
+// const numberArray = [-7, -11, 1, 3, 6, 7, 11 , 22];
+ 
+
+    
+ 
