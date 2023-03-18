@@ -48,41 +48,38 @@
 //функция, которая будет принимать на вход целое число, а возвращать массив случайных целых чисел от 0 до переданного числа.
 // Длина массива должна быть в 2 раза меньше переданного числа.
 
-function randomNumber (min, max) {
+// function randomNumber (min, max) {
 
-    return Math.floor(Math.random() * (max - min +1 )) + min;
+//     return Math.floor(Math.random() * (max - min +1 )) + min;
    
-   };
+//    };
    
-   function Integer(max) {
+//    function Integer(max) {
    
-   const arr = [];
+//    const arr = [];
    
-   for (let i = 0; i < (Math.floor(max)-1) / 2; i++ ) {   ///делали c вместе с проверяющим под темами - не до конца понимаю эту строчку -1 потому что не надо включать в длину max?
+//    for (let i = 0; i < (Math.floor(max)-1) / 2; i++ ) {   ///делали c вместе с проверяющим под темами - не до конца понимаю эту строчку -1 потому что не надо включать в длину max?
    
-       arr.push(randomNumber( 0, max));
+//        arr.push(randomNumber( 0, max));
    
-       };
+//        };
    
-       return arr;
-   }
-   console.log(Integer(9));
+//        return arr;
+//    }
+//    console.log(Integer(9));
 
 
 //7  Напишите функцию, которая на вход принимает 2 целых числа,
 // а в качестве результата возвращает случайное целое число в этом диапазоне.
 
 
-function randomNumber (min, max) {
+// function randomNumber (min, max) {
  
-    return Math.floor(Math.random() * (max - min +1 )) + min;
-}
-randomNumber ();
+//     return Math.floor(Math.random() * (max - min +1 )) + min;
+// }
+// randomNumber ();
 
-console.log(randomNumber (8,18))  // не понимаю разницы с заданием  c 5 - м заданием
-
-
-
+// console.log(randomNumber (8,18))  // не понимаю разницы с заданием  c 5 - м заданием
 
 
 
@@ -113,7 +110,22 @@ console.log(randomNumber (8,18))  // не понимаю разницы с за�
 
 //11
 
-const arrFruits = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
-//console.log(arrFruits);
-const arrFruitsNew = arrFruits.sort(() => Math.random() - 0.5);
- console.log(...[arrFruitsNew]);
+//  function memorizeWords() {
+
+// const arrFruits = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+// //console.log(arrFruits);
+//  arrFruits = arrFruits.sort(() => Math.random() - 0.5);   // можно обьяснить как работает метод??/взято из подсказки в домашке
+//  alert (arrFruits);
+
+//  let fistQuestion = prompt('Чему равнялся первый элемент массива?');
+//  let secondQuestion = prompt ('Чему равнялся последний элемент массива?');
+
+// if (fistQuestion.toLowerCase() == arrFruits[0].toLowerCase() && secondQuestion.toLowerCase() == arrFruits[arrFruits.length-1].toLowerCase()){
+//     alert('Поздравляю, вы угадали оба элемента!');
+// } else if (fistQuestion.toLowerCase() == arrFruits[0].toLowerCase() || secondQuestion.toLowerCase() == arrFruits[arrFruits.length-1].toLowerCase()) {
+//     alert( 'Вы близки к победе');
+// } else 
+//     alert ('Пользователь ничего не угадал');
+//  }
+
+// arrFruits();
