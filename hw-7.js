@@ -41,7 +41,7 @@
  
 //     return Math.floor(Math.random() * (max - min +1 )) + min;
 // }
-//  console.log(randomNumber (1,10)); //так было написано в интернете, если честно не понимаю принцип
+//  console.log(randomNumber (1,10)); //так было написано в интернете, если честно не до конца понимаю принцип
 
 //6
 
@@ -58,7 +58,7 @@ function randomNumber (min, max) {
    
    const arr = [];
    
-   for (let i = 0; i < (Math.floor(max)-1) / 2; i++ ) {
+   for (let i = 0; i < (Math.floor(max)-1) / 2; i++ ) {   ///делали c вместе с проверяющим под темами - не до конца понимаю эту строчку -1 потому что не надо включать в длину max?
    
        arr.push(randomNumber( 0, max));
    
@@ -68,6 +68,18 @@ function randomNumber (min, max) {
    }
    console.log(Integer(9));
 
+
+//7  Напишите функцию, которая на вход принимает 2 целых числа,
+// а в качестве результата возвращает случайное целое число в этом диапазоне.
+
+
+function randomNumber (min, max) {
+ 
+    return Math.floor(Math.random() * (max - min +1 )) + min;
+}
+randomNumber ();
+
+console.log(randomNumber (8,18))  // не понимаю разницы с заданием  c 5 - м заданием
 
 
 
