@@ -6,20 +6,23 @@
 
 //2
 
-// function newArr(arr, str) {
 
-//     arr.forEach((find) => {
-//         if(find.toLowerCase().includes(str.toLowerCase())){
-//             console.log (find);
+
+// function searchStart  (array, str)  {
+//     const newArray = []
+//     array.map((find) => {
+       
+//         if (find.toLowerCase().startsWith(str.toLowerCase())) {
+//             newArray.push(find)
 //         }
-//         arr.push(find);
 //     });
+//     return newArray
 // }
 
-//newArr(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко');
-//newArr (['яблоко', 'груша', 'гриб', 'огурец'], 'гру');
-//newArr (['Дом', 'Банк', 'Больница', 'Театр'], 'Кино'); //тут не знаю, как получить пустой массив, может в  if добавит else ток не понимаю какое условие и действие
 
+// //console.log (searchStart(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко'));
+// //console.log(searchStart(['яблоко', 'груша', 'гриб', 'огурец'], 'гру'));
+//console.log (searchStart(['Дом', 'Банк', 'Больница', 'Театр'], 'Кино')); 
 
 //3
 
@@ -89,9 +92,10 @@
 
 
 //9
-// let currentDate = new Date();
-// currentDate.setDate(73);
-// console.log(currentDate); // не поняла про подсказку и getDate(), так вроде тоже вышло....?
+//let currentDate = new Date();
+
+//currentDate.setDate(73);
+//console.log(currentDate); // не поняла про подсказку и getDate(), так вроде тоже вышло....?
 
 
 //10
