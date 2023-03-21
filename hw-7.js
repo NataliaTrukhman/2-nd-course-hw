@@ -19,8 +19,13 @@
 //     return newArray
 // }
 
+//function searchStart  (array, str)  {
+        //const newArray = []
+        // return array.filter((find) => find.toLowerCase().startsWith(str.toLowerCase()))};
+        
 
-// //console.log (searchStart(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко'));
+
+// console.log (searchStart(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко'));
 // //console.log(searchStart(['яблоко', 'груша', 'гриб', 'огурец'], 'гру'));
 //console.log (searchStart(['Дом', 'Банк', 'Больница', 'Театр'], 'Кино')); 
 
@@ -45,6 +50,8 @@
 //     return Math.floor(Math.random() * (max - min +1 )) + min;
 // }
 //  console.log(randomNumber (1,10)); //так было написано в интернете, если честно не до конца понимаю принцип
+
+//return Math.floor(Math.random() * max);?
 
 //6
 
