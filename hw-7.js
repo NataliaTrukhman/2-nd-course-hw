@@ -8,6 +8,8 @@
 
 
 
+
+
 // function searchStart  (array, str)  {
 //     const newArray = []
 //     array.map((find) => {
