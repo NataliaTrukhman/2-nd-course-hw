@@ -120,7 +120,6 @@ body {
 }
 
 .gameseason-box {
-  height: 800px;
   background: #000915;
   display: flex;
   gap: 135px;
@@ -215,5 +214,8 @@ body {
     font-size: 14px;
     line-height: 22px;
     width: 343px;
+  }
+  .gameseason:nth-last-child(1) {
+    order: -1;
   }
 }/*# sourceMappingURL=style.css.map */
