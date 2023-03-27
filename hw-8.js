@@ -1,4 +1,4 @@
-//1
+// 1
 // function getResult(arr, func) {
 //     return Math.round(func(arr));
 //   }
@@ -44,8 +44,8 @@
 
 // //1.1
 // const arr = [1, '4', 9, 'two'];
-// function reversArr(arr) {           //  let reversArr = (arr) =>
-//     return arr.reverse();           //      arr.reverse();
+// function reversArr(arr) {              //  let reversArr = (arr) =>
+//     return arr.reverse();              //      arr.reverse();
 
 // }
 
@@ -104,3 +104,4 @@
 
 // calling();
 // beeps(talk);
+
