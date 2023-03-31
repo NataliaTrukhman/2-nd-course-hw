@@ -28,14 +28,12 @@
     </div>
 </body>
 <style>
-    .error {
-        background-color: red;
+    .head {
+        color: #ff2600;
     }
 
-    ;
-
-    .head {
-        color: red;
+    .error {
+        background-color: red;
     }
 
     ;
@@ -83,10 +81,35 @@
 
     const buttonElementHeader = document.getElementById('color-button_header');
     const headerElement = document.getElementById('header');
+    let isRed = false;
 
     buttonElementHeader.addEventListener('click', () => {
-        headerElement.classList.add("head");
-    })
+        if (isRed) {
+
+            headerElement.classList.remove("head")
+
+        } else {
+
+            headerElement.classList.add("head")
+
+        }
+
+        isRed = !isRed
+
+    });
+        
+
+
+
+
+    // let data = new Date().toLocaleString();
+    // console.log(data); //30.03.2023, 21:21:17
+
+    // let data = new Date()
+    // let fullDate = data.getDate()+  '.' + data.getMonth() + '.' + data.getFullYear() + ' ' + data.getHours()+ ':' + data.getMinutes();
+    //  console.log(fullDate);
+
+
 
 
 </script>
