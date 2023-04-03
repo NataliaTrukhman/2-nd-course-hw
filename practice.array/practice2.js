@@ -363,3 +363,13 @@
 // let lastElem1 = array.slice(-1);
 // console.log(lastElem1);
 /******************************************************/
+
+
+//     const elements = document.querySelectorAll('body');
+    // const bodyElement = elements[0];
+    // const colors = document.querySelectorAll('span');
+    // for (const color of colors) {
+    //   color.addEventListener('click', ()=> {
+    //     bodyElement.style.backgroundColor = 'red';
+    //   })
+    // };
