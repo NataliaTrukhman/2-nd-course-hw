@@ -24,13 +24,13 @@ const students = [
 ];
 
 const renderStudents = () => {      //превращает массив данных в html разметку и используем значение не из iput, а из обьекта student
-    const studentsHtml = students.map((student) => {
+    const studentsHtml = students.map((student, index) => {    //второй аргумент index  в функции для удаления 
         return `<li class="student"   data-color=" ${student.color}">  
         <p class="student-name">
           ${student.name}, родился(acь) в ${student.year}, любимый цвет
           <span style="color: ${student.color}"> ${student.color}</span>
         </p>
-        <button class="delete-button">Удалить</button>
+        <button data-index="${index}"   class="delete-button">Удалить</button>
       
         
             <!-- <button class="hello" data-name="${nameInputElement.value}">Привет</button><!-->
@@ -107,8 +107,16 @@ const initDeleteButtonsListeners = () => {
     for (const deleteButtonsElement of deleteButtonsElements) {
         deleteButtonsElement.addEventListener('click', () => {
             //console.log(deleteButtonsElement);
-            console.log('Удаляю элемент....');
-            console.log(listElement.innerHTML);
+            //console.log('Удаляю элемент....');
+            //console.log(listElement.innerHTML);
+          //План удаления
+          //1.Мы храним список студентов оы массиве
+        //2. При клике мы удаляем нужный элемент из массива 
+        //3. На основе нового массива в js формируем html разметку списка
+        const index = deleteButtonsElement.dataset.index;       // можем индекс вывести, у элемента кнопки мы обратимся к полю dataset.index
+         // console.log(index); //при клике на кнопку удалить в консоль выводится иднекс элемента с которым связана кнопка 
+          students.splice(index,1);
+          renderStudents(); //вызывать функцию рендер чтобы новую разметку сформировать для новых данных
         });
     }
 }
@@ -130,7 +138,7 @@ buttonElement.addEventListener("click", () => {
 
     });
 
-//после push убрать ниже
+    //после push убрать ниже
     // listElement.innerHTML =
     //     listElement.innerHTML +     //добавляем в разметку data атрибут
     //     `<li class="student"   data-color=" ${colorInputElement.value}">  
