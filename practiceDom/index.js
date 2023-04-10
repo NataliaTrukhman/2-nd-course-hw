@@ -164,6 +164,21 @@ buttonElement.addEventListener("click", () => {
 });
 
 
+// //return `<li class = 'comment'>
+// {/* <div class = 'comment-header'>
+// <div>${comment.name}</div>
+// <div>${comment.date}</div>
+// </div>
+// <div class="comment-body">
+// <div class = 'comment-text'>${comment.text}</div>
+// </div>
+// <div class ='comment-footer'>
+//  <div class="likes">
+//       <span class="likes-counter" >${comments[index].likeCounter}</span>
+//       <button class="like-button ${comments[index].likeButton}" data-index="${index}"></button>
+//     </div></div></li>` */}
+
+
 
 
 
