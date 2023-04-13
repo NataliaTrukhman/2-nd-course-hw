@@ -10,7 +10,7 @@
 //function delMessage() {
 //   let del = confirm('Вы правда хотите удалить?');//true false
 
- //   if (del) {        
+ //   if (del) {
  //       alert('Ок, удалено!');
 //    } else {
 //    alert('Не удалено!');
@@ -54,7 +54,7 @@
 // }
 // console.log(sum(1, 4, ...arrSum));
 
- //let numbers = [5, 100, 99, 4, 23]; 
+ //let numbers = [5, 100, 99, 4, 23];
 // numbers = numbers.sort();
  //console.log(numbers);
 
@@ -96,3 +96,5 @@
 //    minute: "2-digit",
 //   }).replace(", ", " ");
 //   console.log(formattedDate);
+
+
