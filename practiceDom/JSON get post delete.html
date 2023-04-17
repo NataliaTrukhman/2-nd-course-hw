@@ -35,16 +35,13 @@
 
   // Функция fetch отправляет запрос на сервер и возвращает Promise
 // fetch принимает адрес API и объект с параметрами запроса
-const fetchPromise = fetch("https://webdev-hw-api.vercel.app/api/tasks/random-red", {
+fetch("https://webdev-hw-api.vercel.app/api/tasks/random-red", {
       // Указываем метод GET. Кстати, если метод не указать, то по умолчанию будет использован GET
       method: "GET"
-})
-
-// С помощью метода then мы подписываемся на ответ сервера
-fetchPromise.then((response) => {
+}).then((response) => {
   // С помощью метода JSON у объекта ответа мы преобразуем сырые данные
   // от сервера в JavaScript-объект
-  response.json().then((responseData) => {
+  return response.json().then((responseData) => {
      // Здесь нам доступны данные, которыми ответил сервер, в переменной responseData
      console.log(responseData)
   });
@@ -66,6 +63,10 @@ fetch("https://webdev-hw-api.vercel.app/api/todos", {
   });
 });
  
+
+
+
+
   
 </script>
 
