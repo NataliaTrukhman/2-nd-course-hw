@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=sc, initial-scale=1.0">
+  <title>ПРИМЕРЫ Promise chaining</title>
+</head>
+
+<body>
+  <script>
+    //Пример кода с callback hell:
+    //1
+    fetch("https://webdev-hw-api.vercel.app/api/todos", {
+      method: "POST",
+      body: JSON.stringify({
+        text: textInputElement.value,
+      }),
+    }).then((response) => {
+      response.json().then((responseData) => {
+        fetch("https://webdev-hw-api.vercel.app/api/todos", {
+          method: "GET",
+        }).then((response) => {
+          response.json().then((responseData) => {
+            // У нас уже четыре уровня вложенности, что само по себе много
+            // Если в этом коде появится пара вложенных if, цикл for и еще 1 запрос в API,
+            // то этот код превратится в ад, в ад из колбэков :)
+            tasks = responseData.todos;
+            renderTasks();
+          });
+        });
+      });
+    });
+
+
+
+    //2
+    //Переделать код с use Promise chaining, или цепочкой промисов. 
+
+    const startAt = Date.now();  //Положим в переменную время начала выполнения цепочки промисов
+    console.log('Начинаем делать запрос...')
+
+    fetch("https://webdev-hw-api.vercel.app/api/todos", {
+      method: "POST",
+      body: JSON.stringify({
+        text: textInputElement.value,
+      }),
+    })                          //
+      .then((response) => {     //+ then() полученные данные из предыдущего запроса вернуть в следующий then
+        console.log('Время: ' + (Date.now() - startAt)) //сколько выполнялся предыдущий запрос, т.е через какое время вызывался этот then после того как мы запустили фитч запрос на сервер
+        return response;       //
+      })                       //
+
+      .then((response) => {
+        
+        // Этот код сработает после того, как завершится промис от fetch POST
+        // На вход эта функция-обработчик получает ответ от сервера
+        return response.json();
+      })
+        .then((response) => {     //+ then() полученные данные из предыдущего запроса вернуть в следующий then
+        console.log('Время: ' + (Date.now() - startAt)) //сколько выполнялся предыдущий запрос, т.е через какое время вызывался этот then после того как мы запустили фитч запрос на сервер
+        return response;
+      })
+
+
+      .then((responseData) => {
+        // Этот код сработает после того, как завершится промис от response.json()
+        // На вход эта функция-обработчик получает JSON-данные из ответа
+        return fetch("https://webdev-hw-api.vercel.app/api/todos", {
+          method: "GET",
+        });
+      })
+         .then((response) => {     //+ then() полученные данные из предыдущего запроса вернуть в следующий then
+        console.log('Время: ' + (Date.now() - startAt)) //сколько выполнялся предыдущий запрос, т.е через какое время вызывался этот then после того как мы запустили фитч запрос на сервер
+        return response;
+      })
+      
+      .then((response) => {
+        // Этот код сработает после того, как завершится промис от fetch POST
+        return response.json();
+      })
+      .then((responseData) => {
+        // Этот код сработает после того, как завершится промис от response.json() из предыдущего then
+        tasks = responseData.todos;
+        renderTasks();
+      });
+
+
+    //Метод всегда then возвращает промис, у которого мы тоже можем вызывать then.
+    //можно промис от фитча сохранить в переменную и потом от нее вызвать then
+    //В обработчик каждого следующего then приходят данные, с которыми завершился промис из предыдущего.
+    //В обработчике then мы не обязаны возвращать именно промис. Мы можем вернуть любые данные, 
+    //и тогда следующий then в цепочке вызовется сразу с этими данными.
+    fetch("https://webdev-hw-api.vercel.app/api/todos", {
+      method: "POST",
+      body: JSON.stringify({
+        text: textInputElement.value,
+      }),
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((responseData) => {
+        return fetch("https://webdev-hw-api.vercel.app/api/todos", {
+          method: "GET",
+        });
+      })
+      .then((response) => {
+
+        return response.json();
+      })
+      .then((responseData) => {
+        tasks = responseData.todos;
+        renderTasks();
+        return "Привет"   ////////
+      }).then((data) => {
+        console.log(data) // в data лежит возвращаемое из предыдущего промиса значение(return "Привет")
+      })
+
+
+//   renderTasks();
+// textInputElement.value =""
+//  });
+
+
+
+  </script>
+</body>
+
+</html>
