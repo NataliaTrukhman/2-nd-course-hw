@@ -1,9 +1,11 @@
 
 import { students } from "./data.js"  //импортировать переменную в нужное место. из файла data.js
+import { getListStudentsEdit } from "./listStudents.js";
 
-
-
-
+// Т. к. renderStudents экспортировалась по умолчанию default,
+// то имя функции мы не берем в фигурные скобки
+import renderStudents from "./renderStudents.js";
+//#################################################################################
 
 // Поиск статичных элементов по id с помощью getElementById
 // Статичные элементы можно искать и другими методами: querySelector, querySelectorAll
@@ -13,45 +15,10 @@ const nameInputElement = document.getElementById("name-input");
 const colorInputElement = document.getElementById("color-input");
 
 // Данные о студентах в JS-коде импортированы из /data.js
+// убрали callback для возврата редактируемого списка
+// рендер функцию  renderStudents, она импортируется из renderStudents.js
 
-// Реализуем callback для возврата редактируемого списка
-const getListStudentsEdit = (student, index) => {
-    return `
-  <li class="student" data-color="${student.color}">
-    <p class="student-name">
-      ${student.name}
-    </p>
-    <p>Любимый цвет студента: ${student.color}</p>
-    <button data-index="${index}" class="button delete-button">Удалить</button>
-  </li>`;
-};
-
-
-const renderStudents = (listElement, getListStudents) => {
-    const studentsHtml = students
-
-        .map((student, index) => getListStudents(student, index)).join("");
-
-    listElement.innerHTML = studentsHtml;
-
-    const deleteButtons = document.querySelectorAll(".delete-button");
-
-
-    for (const deleteButton of deleteButtons) {
-        deleteButton.addEventListener("click", (event) => {
-            event.stopPropagation();
-
-            const index = deleteButton.dataset.index;
-
-
-            students.splice(index, 1);
-            renderStudents(listElement, getListStudents);
-        });
-    }
-};
-
-// Передаем в рендер-функцию callback редактируемого списка 
-renderStudents(listElement, getListStudentsEdit);
+renderStudents(listElement, getListStudentsEdit); // Функция должна возвращать строковое представление HTML-фрагмента и callback
 
 
 
