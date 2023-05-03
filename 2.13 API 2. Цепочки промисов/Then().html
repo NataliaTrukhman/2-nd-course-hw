@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Урок «Асинхронность»</title>
+</head>
+
+<body>
+  <h1>Список задач</h1>
+  <ul class="tasks" id="list">
+    <!-- Список рендерится из JS -->
+  </ul>
+  <br />
+  <div class="form">
+    <h3 class="form-title">Форма добавления</h3>
+    <div class="form-row">
+      Что нужно сделать:
+      <input type="text" id="text-input" class="input" placeholder="Выпить кофе" />
+    </div>
+    <br />
+    <button class="button" id="add-button">Добавить</button>
+  </div>
+</body>
+
+<script>
+  const buttonElement = document.getElementById("add-button");
+  const listElement = document.getElementById("list");
+  const textInputElement = document.getElementById("text-input");
+
+  let tasks = [];
+
+  // TODO: Опишите в комментариях в коде, что происходит в следующих 8 строчках кода
+  // Получаем данные из API
+  // fetch - запускает выполнение запроса к api
+  //функция вернула promise - типо объекта
+  // fetch("https://webdev-hw-api.vercel.app/api/todos", {
+  //   method: "GET",
+  // }).then((response) => {      //подписываемся на успешное завершение запроса с помощью then - это метод у promise
+  //   response.json().then((responseData) => {  //// Запускаем преобразовываем "сырые" данные от API в json формат 
+  //     // Подписываемся на результат преобразования
+  //     // Здесь нам доступны данные, которыми ответил сервер, в переменной responseData
+  //     tasks = responseData.todos;   //получили данные и рендерим их в приложении по ключу todos
+  //     renderTasks();
+  //   });
+  // });
+
+  
+//через цепочку промисов
+  fetch("https://webdev-hw-api.vercel.app/api/todos", {
+     method: "GET",
+   }).then((response) => {
+      return response.json();
+   }).then((responseData) => {
+   tasks = responseData.todos;
+     renderTasks();
+    });
+
+
+ const renderTasks = () => {
+    const tasksHtml = tasks
+      .map((task) => {
+        return `
+          <li class="task">
+            <p class="task-text">
+              ${task.text}
+              <button data-id="${task.id}" class="button delete-button">Удалить</button>
+            </p>
+          </li>`;
+      })
+      .join("");
+
+    listElement.innerHTML = tasksHtml;
+    const deleteButtons = document.querySelectorAll(".delete-button");
+
+    for (const deleteButton of deleteButtons) {
+      deleteButton.addEventListener("click", (event) => {
+        // TODO: Опишите в комментарии, что делает код на следующей строчке
+        // stopPropagation() отключает всплытие события вверх по дереву
+        // то есть обработчики кликов на элементах выше по дереву не будут вызваны
+        // то есть обработчик клика на элементе списка, который описан ниже в коде, не будет вызван
+        event.stopPropagation();
+
+        const id = deleteButton.dataset.id;
+      // // через вложенность 
+      //   fetch("https://webdev-hw-api.vercel.app/api/todos/" + id, {
+      //     method: "DELETE",
+      //   }).then((response) => {
+      //     response.json().then((responseData) => {
+      //       tasks = responseData.todos;
+      //       renderTasks();
+      //     });
+      //   });
+      
+
+        //через цепочку промисов
+        fetch("https://webdev-hw-api.vercel.app/api/todos/" + id, {
+          method: "DELETE",
+        }).
+          then((response) => {
+            return response.json()
+          }).then((responseData) => {
+            tasks = responseData.todos;
+            renderTasks();
+          });
+        //renderTasks();
+
+      
+      });
+    
+    }
+  };
+renderTasks();
+
+ 
+  
+
+  // TODO: Опишите в этом комментарии, что делает код ниже до конца файла,
+  // настолько подробно, насколько сможете
+  //добавим обработчик клика на форму "Добавить"
+  //делаем валидацию полей
+  //передаем информацию на сервер
+  // В POST-запросах мы можем передавать данные в свойстве body в параметрах запроса
+  // C помощью JSON.stringify превращаем JS-объект в JSON-строчку, которую ожидает сервер
+  //подпишемся на успешный ответ
+  //из ответа достанем обновленный список задач, сохраним в task и перерендерим список
+  buttonElement.addEventListener("click", () => {
+    if (textInputElement.value === "") {
+      return;
+    }
+// через вложенность:
+  //   fetch("https://webdev-hw-api.vercel.app/api/todos", {
+  //     method: "POST",
+  //     body: JSON.stringify({
+  //       text: textInputElement.value,
+  //     }),
+  //   }).then((response) => {
+  //     response.json().then((responseData) => {
+  //       tasks = responseData.todos;
+  //       renderTasks();
+  //     });
+  //   });
+
+  //   textInputElement.value = ""; //очистка полей
+  // });
+
+
+
+  // Пример кода выше, переписанный на цепочку промисов:
+  fetch("https://webdev-hw-api.vercel.app/api/todos", {
+    method: "POST",
+    body: JSON.stringify({
+      text: textInputElement.value,
+    }),
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .then((responseData) => {
+      return fetch("https://webdev-hw-api.vercel.app/api/todos", {
+        method: "GET",
+      });
+    })
+    .then((response) => {
+      return response.json();
+    })
+    .then((responseData) => {
+      tasks = responseData.todos;
+      renderTasks();
+    });
+
+  renderTasks();
+
+  textInputElement.value = "";
+
+  });
+
+
+
+
+
+
+</script>
+
+</html>

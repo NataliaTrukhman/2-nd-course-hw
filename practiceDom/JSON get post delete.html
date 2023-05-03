@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Урок "Асинхронность"</title>
+</head>
+
+<script>
+
+
+   //ЧТО ТАКОЕ JSON 
+    const person = {
+    name: "Глеб",
+    age: 29,
+    isActive: false,
+    skills: ['javascript', 'php']
+  }
+  
+  const jsonPerson = JSON.stringify(person);
+  
+  
+  // выведет строку
+  // {"name":"Глеб","age":29,"isActive":false,"skills":["javascript","php"]}
+  console.log(jsonPerson);
+  
+  const personFromJson = (JSON.parse(jsonPerson))
+  
+  // выведет объект
+  // Object { name: "Глеб", age: 29, isActive: false, skills: (2) […] }
+  console.log(personFromJson)
+
+
+
+
+  // Функция fetch отправляет запрос на сервер и возвращает Promise
+// fetch принимает адрес API и объект с параметрами запроса
+fetch("https://webdev-hw-api.vercel.app/api/tasks/random-red", {
+      // Указываем метод GET. Кстати, если метод не указать, то по умолчанию будет использован GET
+      method: "GET"
+}).then((response) => {
+  // С помощью метода JSON у объекта ответа мы преобразуем сырые данные
+  // от сервера в JavaScript-объект
+  return response.json().then((responseData) => {
+     // Здесь нам доступны данные, которыми ответил сервер, в переменной responseData
+     console.log(responseData)
+  });
+});
+
+
+
+fetch("https://webdev-hw-api.vercel.app/api/todos", {
+  // Указываем метод POST
+  method: "POST", // 
+  // В POST-запросах мы можем передавать данные в свойстве body в параметрах запроса
+  // C помощью JSON.stringify превращаем JS-объект в JSON-строчку, которую ожидает сервер
+  body: JSON.stringify({
+    text: textInputElement.value,
+  }),
+}).then((response) => {
+  response.json().then((responseData) => {
+			console.log(responseData)
+  });
+});
+ 
+
+
+
+
+  
+</script>
+
+</html>
