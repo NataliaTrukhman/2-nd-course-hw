@@ -31,22 +31,22 @@
 
     let tasks = [];
 
-    const host = "https://webdev-hw-api.vercel.app/api/v2/todos" //выносим в переменную адрес API
+    const host = "https://webdev-hw-api.vercel.app/api/v2/todos" ;//выносим в переменную адрес API
     //let password = "123456";   //пароль тоже в переменную
-    let password = prompt("Ввести пароль")   //ключ пароль - нужно запрашивать у пользователя перед стартом приложения   
+    let token = "Bearer asb4c4boc86gasb4c4boc86g37w3cc3bo3b83k4g37k3bk3cg3c03ck4k";
 
     const fetchTodosAndRender = () => {
         return fetch(host, {
             method: "GET",
             headers: {
-                Authorization: password,
+                Authorization: token,
             },
         })
             .then((response) => {
                 // обработать 401 код ответа 
                 if (response.status === 401) {
-                    password = prompt("Ввести верный пароль");
-                    fetchTodosAndRender();  //вызвать рендер чтобы повторно запросить данные с сервера
+                //     password = prompt("Ввести верный пароль");
+                //     fetchTodosAndRender();  //вызвать рендер чтобы повторно запросить данные с сервера
                     throw new Error("Нет авторизации");//кинуть ошибку
                 }
                 return response.json();
@@ -80,10 +80,10 @@
                 const id = deleteButton.dataset.id;
 
                 // Подписываемся на успешное завершение запроса с помощью then
-                fetch("https://webdev-hw-api.vercel.app/api/todos/" + id, {
+                fetch(`${host}/${id}`, {
                     method: "DELETE",
                     headers: {
-                        Authorization: password,
+                        Authorization: token,
                     },
                 })
                     .then((response) => {
@@ -117,7 +117,7 @@
                 text: textInputElement.value,
             }),
             headers: {
-                Authorization: password,
+                Authorization: token,
             },
         })
             .then((response) => {
